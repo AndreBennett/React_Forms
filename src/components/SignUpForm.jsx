@@ -20,8 +20,9 @@ const SignUpForm = () => {
             }),
            }
         );
-           const result = response.json(result);
+           const result = await response.json(result);
            setToken(result.token);
+           setError('');
         } catch (error) {
             setError(error.message);
         }
